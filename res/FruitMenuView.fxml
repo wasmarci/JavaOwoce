@@ -13,31 +13,23 @@
 	<padding><Insets top="25" right="25" bottom = "10" left = "25" /></padding>
 	<gridLinesVisible>false</gridLinesVisible>
 	
-	<Text text = "Welcome"
+	<Text text = "Wybierz sobie owoce:"
 		GridPane.columnIndex="0" 
 		GridPane.rowIndex="0"
 		GridPane.columnSpan="2" />
 
-	<Label text="User Name:"
-		GridPane.columnIndex="0"
-		GridPane.rowIndex="1" />
-	
-	<TextField 
-        GridPane.columnIndex="1"
-        GridPane.rowIndex="1"/>
- 
-    <Label text="Password:"
-        GridPane.columnIndex="0"
-        GridPane.rowIndex="2"/>
- 
-    <PasswordField fx:id="passwordField" 
-        GridPane.columnIndex="1"
-        GridPane.rowIndex="2"/>
+	<FlowPane fx:id="fruitContainer"
+		GridPane.columnIndex="0" 
+		GridPane.rowIndex="1"
+		GridPane.columnSpan="2"
+		orientation="VERTICAL"
+		
+	></FlowPane>
         
     <HBox spacing="10" 
     	alignment="bottom_right"
-    	GridPane.columnIndex="1" 
-    	GridPane.rowIndex="4">
+    	GridPane.columnIndex="0" 
+    	GridPane.rowIndex="3">
     	
     	<Button fx:id="actionButton" 
     		text="Sign In"

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+	<fruit name='banany' foto='banany.png' />
+	<fruit name='jabłka' foto='apples.jpg' />
+	<fruit name='marchewki' foto='carrots.jpg' />
+	<fruit name='wiśnie' foto='cherries.jpg' />
+</menu>
