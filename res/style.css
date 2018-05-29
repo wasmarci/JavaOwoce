@@ -1,0 +1,55 @@
+/* general */
+.custom-button {
+    -fx-font: 16px "Sans";
+    -fx-padding: 10;
+    -fx-background-color: #005e83;
+    -fx-text-fill: #e3d9c6;
+}
+
+.grid {
+	-fx-background-color: #b9ceac;
+}
+
+.titleText {
+	-fx-font: 24px "Sans";
+	-fx-font-weight: bold;
+    -fx-padding: 10;
+    -fx-fill: #a72920;
+}
+
+/* menu */
+
+.menuGrid {
+	-fx-background-color: #b9ceac;
+	-fx-hgap: 10;
+	-fx-vgap: 10;
+	-fx-alignment: center right;
+	-fx-padding: 25;
+}
+
+.menuItemGrid {
+	-fx-background-color: #e6d2b5;
+	-fx-hgap: 10;
+	-fx-vgap: 10;
+	-fx-alignment: center right;
+	-fx-padding: 25;
+}
+
+
+/* selection */
+
+.selectionText {
+	-fx-font: 12px "Sans";
+	-fx-font-weight: bold;
+    -fx-padding: 10;
+    -fx-fill: #191e28;
+    -fx-border-color: #191e28;
+	-fx-border-radius: 3;
+	-fx-border-width: 3;
+	-fx-border-style: solid;
+    
+}
+
+.selectionGrid {
+	-fx-background-color: #d8a0a6
+	}

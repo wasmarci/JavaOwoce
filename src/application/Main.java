@@ -1,5 +1,7 @@
 package application;
 	
+import java.io.IOException;
+
 import Model.FruitMenuModel;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -23,11 +25,12 @@ public class Main extends Application {
 									
 			Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("FruitMenuView.fxml"));
 			Scene scene = new Scene(root,600,600);
+			scene.getStylesheets().add("style.css");
 			primaryStage.setScene(scene);
 			primaryStage.show();
 			
 		} 
-		catch(Exception e) {
+		catch(IOException e) {
 			e.printStackTrace();
 		}
 	}

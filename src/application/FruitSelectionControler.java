@@ -37,6 +37,7 @@ public class FruitSelectionControler {
 		try {
 			root = FXMLLoader.load(getClass().getClassLoader().getResource("FruitMenuView.fxml"));
 			Scene scene = new Scene(root, currentScene.getWidth(), currentScene.getHeight());
+			scene.getStylesheets().add("style.css");
 			window.setScene(scene);
 			window.show();
 		} catch (IOException e) {
@@ -46,15 +47,32 @@ public class FruitSelectionControler {
 	
 	public void initialize() {
 		LinkedList<Fruit> list = model.getFruitList();
+		LinkedList<String> chosenFruits = new LinkedList<String>();
+		for(int i = 0; i < list.size(); i++) {
+			if(list.get(i).getChosen()) {
+				chosenFruits.add(list.get(i).getName());
+			}
+		}
 		
+		String text = new String();
+		if (chosenFruits.size() == 0) {
+			text = "Nie wybrano ¿adnych owoców";
+		}
+		else {
+			text = "Wybrano: \n";
+			for(int i = 0; i < chosenFruits.size(); i++) {
+				text = text + chosenFruits.get(i) + ", ";
+			}
+		}
+		/**
 		String selected = new String();
 		for(int i = 0; i < list.size(); i++) {
 			if(list.get(i).getChosen()) {
 				selected = selected + ' ' + list.get(i).getName() + ',';
 			}
 		}
-
-		targetText.setText(selected);
+		*/
+		targetText.setText(text);
 
 	}
 	

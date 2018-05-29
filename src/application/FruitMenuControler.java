@@ -37,6 +37,7 @@ public class FruitMenuControler {
 		try {
 			root = FXMLLoader.load(getClass().getClassLoader().getResource("FruitSelectionView.fxml"));
 			Scene scene = new Scene(root, currentScene.getWidth(), currentScene.getHeight());
+			scene.getStylesheets().add("style.css");
 			window.setScene(scene);
 			window.show();
 		} catch (IOException e) {
@@ -51,12 +52,14 @@ public class FruitMenuControler {
 			
 			Fruit childItem = list.get(i);
 			GridPane childContainer = new GridPane();
+			childContainer.getStyleClass().add("menuItemGrid");
 			Label label = new Label(childItem.getName());
 			childContainer.add(label, 1, 0);
 			try {
 				ImageView foto = new ImageView(childItem.getFoto());
-				foto.setFitHeight(50);
-				foto.setFitWidth(50);
+				foto.setFitHeight(100);
+				foto.setFitWidth(100);
+
 				childContainer.add(foto, 2, 0);
 			}
 			catch(Exception  e) {
@@ -67,7 +70,7 @@ public class FruitMenuControler {
 			box.setId(childItem.getName());
 			box.setSelected(childItem.getChosen());
 			box.selectedProperty().addListener(new ChangeListener<Boolean>() {
-                @SuppressWarnings("rawtypes")
+                
 				public void changed(ObservableValue ov, Boolean old_val, Boolean new_val) {
                 	childItem.setChosen(new_val);
                         
