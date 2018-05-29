@@ -10,11 +10,31 @@ import javafx.scene.Scene;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class KontrolerJeden {
+public class FruitMenuControler {
 	
 	private Stage thestage;
 	
 	private Parent root;
+	
+	public FruitMenuControler() {
+	
+	}
+	
+	public FruitMenuControler(Stage s, Parent r) {
+		thestage = s;
+		root = r;
+	}
+	
+	public void showMenuView() {
+		try {
+			root = FXMLLoader.load(getClass().getClassLoader().getResource("FruitSelectionView.fxml"));
+			Scene scene = new Scene(root);
+			thestage.setScene(scene);
+			thestage.show();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 	
 	@FXML private Text actiontarget;
 	
@@ -24,7 +44,7 @@ public class KontrolerJeden {
 		thestage = (Stage) actiontarget.getScene().getWindow();
 		
 		try {
-			root = FXMLLoader.load(getClass().getClassLoader().getResource("Widok2.fxml"));
+			root = FXMLLoader.load(getClass().getClassLoader().getResource("FruitSelectionView.fxml"));
 			Scene scene = new Scene(root);
 			thestage.setScene(scene);
 			thestage.show();

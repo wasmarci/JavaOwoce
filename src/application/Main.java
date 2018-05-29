@@ -11,17 +11,20 @@ import javafx.scene.Scene;
 
 public class Main extends Application {
 	
-	Stage thestage;
+	Stage thestage = new Stage();
+	Parent root;
+	FruitMenuControler menuControler = new FruitMenuControler(thestage, root); 
 	
 	
 	@Override
-	public void start(Stage primaryStage) {
-		thestage = primaryStage;
-		try {
+	//public void start(Stage primaryStage) {
+	public void start(Stage thestage) {
+						
+		
+		menuControler.showMenuView();
+		/*try {
 			
-			Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Widok1.fxml"));
-			
-			
+			Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("FruitMenuView.fxml"));
 			
 			Scene scene = new Scene(root,400,400);
 			
@@ -32,7 +35,8 @@ public class Main extends Application {
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
-	}
+	} */
+		}
 		
 	public static void main(String[] args) {
 		launch(args);
