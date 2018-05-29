@@ -7,36 +7,25 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 
 
-
-
 public class Main extends Application {
 	
-	Stage thestage = new Stage();
-	Parent root;
-	FruitMenuControler menuControler = new FruitMenuControler(thestage, root); 
-	
+	Stage window;
 	
 	@Override
-	//public void start(Stage primaryStage) {
-	public void start(Stage thestage) {
+	public void start(Stage primaryStage) {
+		window = primaryStage;
+		try {
 						
-		
-		menuControler.showMenuView();
-		/*try {
-			
 			Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("FruitMenuView.fxml"));
-			
-			Scene scene = new Scene(root,400,400);
-			
+			Scene scene = new Scene(root,600,600);
 			primaryStage.setScene(scene);
-			
 			primaryStage.show();
 			
-		} catch(Exception e) {
+		} 
+		catch(Exception e) {
 			e.printStackTrace();
 		}
-	} */
-		}
+	}
 		
 	public static void main(String[] args) {
 		launch(args);

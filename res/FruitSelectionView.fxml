@@ -39,13 +39,11 @@
     	GridPane.columnIndex="1" 
     	GridPane.rowIndex="4">
     	
-    	<Button text="Sign In"
+    	<Button fx:id="actionButton"
+    		text="Sign In"
     		onAction="#handleSubmitButtonAction"/>
     </HBox>
     
-    <Text fx:id="actiontarget"
-    	GridPane.columnIndex="1"
-    	GridPane.rowIndex="6"/>
     	
 	
 </GridPane>
