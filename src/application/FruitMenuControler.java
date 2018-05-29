@@ -8,7 +8,6 @@ import Model.FruitMenuModel;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -34,10 +33,9 @@ public class FruitMenuControler {
 		Stage window = (Stage) currentScene.getWindow();
 		Parent root;
 		
-		//fruitContainer.getChildren();
 				
 		try {
-			root = FXMLLoader.load(getClass().getClassLoader().getResource("FruitMenuView.fxml"));
+			root = FXMLLoader.load(getClass().getClassLoader().getResource("FruitSelectionView.fxml"));
 			Scene scene = new Scene(root, currentScene.getWidth(), currentScene.getHeight());
 			window.setScene(scene);
 			window.show();
@@ -69,7 +67,8 @@ public class FruitMenuControler {
 			box.setId(childItem.getName());
 			box.setSelected(childItem.getChosen());
 			box.selectedProperty().addListener(new ChangeListener<Boolean>() {
-                public void changed(ObservableValue ov, Boolean old_val, Boolean new_val) {
+                @SuppressWarnings("rawtypes")
+				public void changed(ObservableValue ov, Boolean old_val, Boolean new_val) {
                 	childItem.setChosen(new_val);
                         
                 }

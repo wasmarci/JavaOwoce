@@ -32,7 +32,7 @@
     	GridPane.rowIndex="3">
     	
     	<Button fx:id="actionButton" 
-    		text="Sign In"
+    		text="Zatwierdz"
     		onAction="#handleSubmitButtonAction"/>
     </HBox>
         	
