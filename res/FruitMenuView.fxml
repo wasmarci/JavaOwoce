@@ -38,7 +38,8 @@
     	<Button fx:id="actionButton"
     		styleClass="custom-button"
     		text="Zatwierdz"
-    		onAction="#handleSubmitButtonAction" />
+    		onAction="#handleSubmitButtonAction" 
+    		/>
     </HBox>
         	
 	
